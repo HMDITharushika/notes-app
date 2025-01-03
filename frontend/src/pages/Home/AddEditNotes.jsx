@@ -9,6 +9,15 @@ const AddEditNotes = ({ noteData, type, onclose }) => {
 
   const [error, setError] = useState(null);
 
+  // Add Note
+
+  const addNewNote = async () => {};
+
+  // Edit Note
+  const editNote = async () => {};
+
+
+
   const handleAddNote = () => {
     if (!title) {
       setError("Please enter the title");
@@ -19,6 +28,12 @@ const AddEditNotes = ({ noteData, type, onclose }) => {
       return;
     }
     setError("");
+
+    if (type=== 'edit'){
+      editNote()
+    } else{
+      addNewNote()
+    }
   };
 
   return (
